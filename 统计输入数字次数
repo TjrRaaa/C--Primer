@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int curVal = 0, val = 0;
+	if (cin >> curVal)  //保证输入不为空
+	{
+		int cnt = 1; 
+		while (cin >> val)
+		{
+			if (val == curVal)
+				++cnt;
+			else
+			{
+				cout << curVal << "出现了" << cnt << "次" << endl;
+				curVal = val;
+				cnt = 1;
+			}// else 结束
+		}//while结束
+		cout << curVal << "出现了" << cnt << "次" << endl;
+	} //7行if 结束		
+	return 0;
+}//主函数结束
